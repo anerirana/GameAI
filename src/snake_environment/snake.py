@@ -20,7 +20,7 @@ class Snake:
         if len(self.snake_body) > 1:
             if np.any(np.all(self.snake_body[-1] == np.array(self.snake_body[:-1]), axis=1)):
                 self.alive = False
-        if np.any((np.array(self.snake_body) < 0) | self.snake_body >=  self.n, axis=None):
+        if np.any((np.array(self.snake_body) < 0) | np.array(self.snake_body >=  self.n), axis=None):
             self.alive = False
         return self.alive
     
